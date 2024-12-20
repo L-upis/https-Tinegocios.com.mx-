@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TI CLEAN & BUSINESS</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    
+    <style>
+     
+
+
+        /* Estilos para el ícono de WhatsApp */
+        #whatsapp-icon {
+            color: green;
+            font-size: 37px;
+        }
+
+        .header-container {
+            position: relative;
+            text-align: center;
+            color: rgb(255, 255, 255);
+            padding-top: 0; /* Ajustar el padding superior */
+            overflow: hidden; /* Para evitar el desbordamiento */
+        }
+
+        .header-image {
+            width: 120%;
+            height: auto; /* Cambiado para mantener la proporción */
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(230, 7, 26, 0.2);
+            position: relative; /* Cambiado para evitar problemas de visualización */
+            z-index: -1;
+            
+        }
+
+        .col-md-6 {
+           padding-top: 40px;  /* img. Diseñito ,Ajusta el valor a lo que necesites de DISEÑITO  */
+        }
+
+        .col-md-6 img {
+            margin-top: 40px;  /*img.DISEÑITO, Ajusta el valor a lo que necesites */
+            margin-left: -48px;  /* Ajusta el valor para mover la imagen hacia la izquierda */
+        }
+
+
+        .header-content {
+            position: absolute; /* Cambiado a absolute para posicionar sobre la imagen */
+            top: 50%; /* Centrar verticalmente */
+            left: 40%; /* Ajustar para mover hacia la izquierda */
+            transform: translate(-50%, -50%); /* Ajustar el centro del elemento */
+            z-index: 1; /* Asegurarse de que el texto esté por encima de la imagen */
+            text-align: left; /* Alinear el texto a la izquierda */
+        }
+
+        .header-content h1 {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .header-content p {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+
+        .btn-ver-servicios {
+            background-color: #28a745;
+            color: rgb(194, 191, 191);
+            padding: 12px 30px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+
+        .description {
+            text-align: center;
+            font-size: 2rem;
+            margin: 20px A0;
+        }
+
+        .container h2 {
+            font-size: 2.8rem;
+            color: #0a0a0a;
+            margin-bottom: 80px;
+            margin-top: 50px;  /* Esto agregará un espacio extra en la parte superior */
+
+        }
+
+        .container h3 {
+            font-size: 1.5rem;
+            color: #2480b6;
+            margin-bottom: 30px;
+        }
+
+        .container p {
+            font-size: 1.2rem;
+            line-height: 1.6;
+        }
+    </style>
+
+    
+<style>
+/* Estilo General de la Sección de Beneficios */
+.benefits-section {
+    background-color: #f4f6f9; /* Fondo suave */
+    padding: 80px 0; /* Espaciado superior e inferior */
+    text-align: center;
+}
+
+/* Título de la Sección */
+.section-title {
+    font-size: 2.5rem;
+    color: #000000; /* Color llamativo */
+    font-weight: 700;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Contenedor de Tarjetas de Beneficios */
+.benefits-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Tres columnas en una fila */
+    gap: 30px; /* Espaciado entre tarjetas */
+    padding: 0 20px;
+}
+
+/* Estilo de cada tarjeta de beneficio */
+.benefit-card {
+    background-color: #c7e7d7; /* Fondo blanco */
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 40px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    text-align: center;
+    position: relative;
+}
+
+/* Efecto hover de las tarjetas */
+.benefit-card:hover {
+    transform: translateY(-10px); /* Eleva la tarjeta */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Sombra más profunda */
+}
+
+/* Estilo de los íconos dentro de las tarjetas */
+.benefit-card .icon {
+    font-size: 40px;
+    color: #111213; /* Color azul para los íconos */
+    margin-bottom: 20px;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Efecto hover sobre los íconos */
+.benefit-card:hover .icon {
+    color: #28a745; /* Cambia a verde al pasar el ratón */
+}
+
+/* Estilo del título de cada beneficio */
+.benefit-card .benefit-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Descripción de cada beneficio */
+.benefit-card .benefit-description {
+    font-size: 1rem;
+    color: #777;
+    line-height: 1.6;
+}
+
+/* Diseño responsivo para pantallas pequeñas */
+@media (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .benefits-container {
+        grid-template-columns: 1fr 1fr; /* Dos columnas en pantallas más pequeñas */
+    }
+
+    .benefit-card {
+        padding: 30px;
+    }
+}
+</style>
+
+
+<!-- Estilos adicionales para mejorar la apariencia de contacto -->
+<style>
+    #contacto h2 {
+        font-size: 2.5rem;
+        font-weight: 600;
+        color: #080808;
+        margin-bottom: 50px;
+    }
+
+    .card {
+        border-radius: 10px;
+    }
+
+    .card-title {
+        font-size: 1.5rem;
+        font-weight: 500;
+        color: #007bff;
+        margin-bottom: 20px;
+    }
+
+    .card-body {
+        padding: 20px;
+    }
+
+    .list-unstyled li {
+        margin-bottom: 15px;
+        font-size: 1.1rem;
+    }
+
+    .list-unstyled li i {
+        color: #007bff;
+        margin-right: 10px;
+    }
+
+    .embed-responsive {
+        border-radius: 10px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    a {
+        color: #007bff;
+        text-decoration: none;
+    }
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+    .text-center p {
+        font-size: 1rem;
+        color: #6c757d;
+        margin-top: 20px;
+    }
+</style>
+
+<style>
+ .social-icons {
+    display: flex; /* Usar flexbox para alinear los íconos */
+    align-items: center; /* Centrar verticalmente los íconos */
+    margin-top: 40px;
+}
+
+.social-icons .nav-link {
+    color: #007bff; /* Color de los íconos */
+    font-size: 24px; /* Tamaño de los íconos */
+    margin-left: 10px; /* Espaciado entre los íconos */
+}
+
+#whatsapp-icon {
+    color: green; /* Color específico para WhatsApp */
+}
+
+#facebook-icon {
+    color: #3b5998; /* Color específico para Facebook */
+}
+
+
+footer {
+            background-color: #198754;
+            color: white;
+            text-align: center;
+            padding: 20px;
+
+    
+        }
+
+ /* Reset básico para las imágenes del carrusel */
+.carousel {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-slide {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-slide img {
+    width: 100%; /* Asegura que las imágenes se ajusten al tamaño del contenedor */
+    display: block;
+}
+
+</style>
+
+</head>
+<body>
+
+
+ <!-- Barra de navegación -->
+ <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="index.html">
+        <img src="logo.png" alt="TI Clean & Business Logo" style="width: 298px;">
+    </a>
+    <div class="social-icons" style="margin-left: 15px;">
+        <a href="https://wa.me/9712640279" target="_blank" id="whatsapp-icon" class="nav-link">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        <a href="https://www.facebook.com/TINegocios" target="_blank" id="facebook-icon" class="nav-link">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="nosotros.html">Nosotros</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="servicios.html">Servicios</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="proyectos.html">Proyectos</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="contacto.html">Contacto</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+    <!-- Encabezado Principal con Imagen de Fondo y Texto Superpuesto -->
+    <div class="header-container">
+        <img src="log.png" alt="Imagen de Limpieza y Servicios" class="header-image img-fluid">
+        <div class="header-content">
+            <h1>Personal de confianza y altamente capacitado</h1>
+            <p>Cubrimos las necesidades de limpieza y servicios eficientes.</p>
+            <a href="#contacto" class="btn-ver-servicios">Contáctanos</a>
+        </div>
+    </div>
+    
+    <!-- Sección ¿Quiénes somos? -->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <img src="Diseñito.png" alt="¿Quiénes somos?" class="img-fluid rounded"> <!-- Imagen de la sección -->
+            </div>
+            <div class="col-md-6">
+                <h2>¿QUIÉNES SOMOS?</h2>
+                <h3>TI CLEAN & BUSINESS</h3>
+                <p>Somos una empresa sustentable especializada en servicios de limpieza, comprometidos en crear ambientes sanos y áreas limpias, así como brindarle solución en servicios de Tecnología e Informática, Energías Renovables y de Sistemas de Seguridad.</p>
+            </div>
+        </div>
+    </div>
+
+ <!-- Sección de Beneficios -->
+<div class="benefits-section">
+    <h2 class="section-title">Beneficios de Elegir TI CLEAN</h2>
+    <div class="benefits-container">
+        <div class="benefit-card">
+            <div class="icon">
+                <i class="fas fa-leaf"></i>
+            </div>
+            <h4 class="benefit-title">Sustentabilidad</h4>
+            <p class="benefit-description">Somos una empresa sustentable la cual día a día más clientes nos prefieren.</p>
+        </div>
+        <div class="benefit-card">
+            <div class="icon">
+                <i class="fas fa-certificate"></i>
+            </div>
+            <h4 class="benefit-title">Calidad ISO-9001</h4>
+            <p class="benefit-description">Estamos comprometidos con el servicio de calidad teniendo el ISO-9001.</p>
+        </div>
+        <div class="benefit-card">
+            <div class="icon">
+                <i class="fas fa-user-check"></i>
+            </div>
+            <h4 class="benefit-title">Personal Capacitado</h4>
+            <p class="benefit-description">Personal capacitado para actividades específicas.</p>
+        </div>
+        <div class="benefit-card">
+            <div class="icon">
+                <i class="fas fa-dollar-sign"></i>
+            </div>
+            <h4 class="benefit-title">Precios Justos</h4>
+            <p class="benefit-description">Servicios óptimos cuidando la inversión de nuestros clientes a precios justos.</p>
+        </div>
+        <div class="benefit-card">
+            <div class="icon">
+                <i class="fas fa-heart"></i>
+            </div>
+            <h4 class="benefit-title">Ambientes Saludables</h4>
+            <p class="benefit-description">Creamos ambientes sanos y limpios generando condiciones saludables.</p>
+        </div>
+        <div class="benefit-card">
+            <div class="icon">
+                <i class="fas fa-tools"></i>
+            </div>
+            <h4 class="benefit-title">Innovación Continua</h4>
+            <p class="benefit-description">Estamos a la vanguardia, actualizándonos en procesos y utilizando los mejores equipos para el desarrollo de actividades.</p>
+        </div>
+    </div>
+</div>
+
+
+<!-- Sección de Contacto -->
+<section id="contacto" class="container mt-5">
+    <h2 class="text-center mb-5">Contacto</h2>
+
+    <div class="row">
+        <!-- Información de contacto -->
+        <div class="col-md-6">
+            <div class="card shadow-sm border-light mb-4">
+                <div class="card-body">
+                    <h4 class="card-title text-primary">Información de Contacto</h4>
+                    <ul class="list-unstyled">
+                        <li><i class="fas fa-phone-alt"></i> <strong>Teléfono:</strong> 971-688-32-52</li>
+                        <li><i class="fab fa-whatsapp"></i> <strong>WhatsApp:</strong> 951-408-80-52</li>
+                        <li><i class="fas fa-envelope"></i> <strong>Correo :</strong> tinegocios@tinegocios.com.mx</li>
+                        <li><i class="fas fa-envelope"></i> <strong>Correo :</strong> ti.negocios@hotmail.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> <strong>Dirección:</strong> Avenida Melchor Ocampo s/n, entre C. Hidalgo y Porfirio Diaz, Tercera Sección, 70117 El Espinal, Oax.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mapa -->
+        <div class="col-md-6">
+            <div class="card shadow-sm border-light mb-4">
+                <div class="card-body">
+                    <h4 class="card-title text-primary">Ubícanos</h4>
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <!-- Aquí está el iframe del mapa de Google -->
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3825.7586050382024!2d-95.0462663206543!3d16.487756400000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x859554e51aa95219%3A0x4080b7f55dc3fb11!2sTI%20Clean%20%26%20Business!5e0!3m2!1ses-419!2smx!4v1732082159870!5m2!1ses-419!2smx" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script>
+    // Referencia al contenedor del carrusel
+const slide = document.querySelector('.carousel-slide');
+const images = document.querySelectorAll('.carousel-slide img');
+
+let index = 0;
+
+// Función para mover al siguiente slide
+function nextSlide() {
+    index++;
+    if (index >= images.length) {
+        index = 0; // Volver al inicio cuando se llegue al final
+    }
+    slide.style.transform = `translateX(-${index * 100}%)`; // Cambiar el transform
+}
+
+// Cambiar de imagen cada 2 segundos
+setInterval(nextSlide, 3000); // 3000 ms = 3 segundos
+</script>
+
+
+   <!-- Footer -->
+<footer>
+    <p>© 2024 TI Clean & Business. Todos los derechos reservados.</p>
+</footer>
+
+
+<!-- Scripts de Bootstrap -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
