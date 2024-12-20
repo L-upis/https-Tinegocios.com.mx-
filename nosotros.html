@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros - TI Clean & Business</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css"> 
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f4f8fa;
+            color: #333;
+        }
+
+        .navbar {
+            background-color: #ffffff;
+        }
+
+        .navbar-brand img {
+            width: 500px;
+        }
+
+        .section-header {
+            background-color: #6da5da;
+            color: white;
+            padding: 15px;
+            border-radius: 100px;
+            font-size: 1.5em;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .content-section {
+            margin-top: 60px;
+            padding-bottom: 30px;
+        }
+
+        .content-section h2 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 25px;
+            font-weight: bold;
+        }
+
+        .content-section p {
+            font-size: 1.1em;
+            line-height: 1.7;
+            color: #555;
+            text-align: justify;
+        }
+
+        .info-box {
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+            transition: transform 0.9s ease-in-out;
+        }
+
+        .info-box:hover {
+            transform: translateY(-5px);
+        }
+
+        .info-box img {
+            max-width: 120px;
+            margin-right: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .info-box .text-content {
+            flex-grow: 1;
+        }
+
+        .info-box h4 {
+            font-size: 1.3em;
+            color: #333;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .info-box p {
+            font-size: 1.1em;
+            color: #555;
+        }
+
+        .btn-primary {
+            background-color: #5abbca;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            font-size: 1.1em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .btn-primary:hover {
+            background-color: #0f6b8a;
+        }
+
+        .img-fluid {
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(199, 106, 106, 0.1);
+        }
+
+        .section-intro {
+            margin-bottom: 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #6da5da;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-intro .text-content {
+            flex-basis: 60%;
+        }
+
+        .section-intro h1 {
+            font-size: 2.5em;
+            color: white;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .section-intro p {
+            font-size: 1.1em;
+            color: white;
+            line-height: 1.7;
+        }
+
+        .section-intro .img-content {
+            flex-basis: 35%;
+            text-align: center;
+        }
+
+        .section-intro .img-content img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(199, 106, 106, 0.1);
+        }
+
+        footer {
+            background-color: #198754;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 1.1em;
+        }
+
+        .policy-section {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .policy-box {
+            background-color: s#ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 10px rgba(153, 135, 135, 0.1);
+        }
+
+        .policy-box h4 {
+            font-size: 1.2em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .policy-box p {
+            font-size: 1em;
+            color: #555;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Barra de navegación -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <a class="navbar-brand" href="index.html">
+            <img src="logo.png" alt="TI Clean & Business Logo" style="width: 298px;">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="nosotros.html">Nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="servicios.html">Servicios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="proyectos.html">Proyectos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contacto.html">Contacto</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="https://wa.me/9712640279" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Contenido principal -->
+    <div class="container mt-5">
+        <!-- Sección introductoria -->
+        <div class="section-intro">
+            <div class="text-content">
+                <h1>¡Nosotros somos la mejor opción!</h1>
+                <p>En TI Clean & Business, somos la mejor opción en limpieza especializada del país, ofreciendo un servicio impecable, buscando siempre la satisfacción de nuestros clientes y la mejora continua de nuestros procesos.</p>
+            </div>
+            <div class="img-content">
+                
+            </div>
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="equipo3.png" class="d-block w-100" alt="equipo3.png">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="grupo.png" class="d-block w-100" alt="grupo.png">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="equipo.png" class="d-block w-100" alt="equipo.png">
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Anterior</span>
+                </a>
+                <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Siguiente</span>
+                </a>
+            </div>
+            
+        </div>
+
+        <!-- Misión -->
+        <div class="content-section">
+            <div class="section-header">
+                <h2>Nuestra Misión</h2>
+            </div>
+            <div class="info-box">
+                <img src="Nosotros/MISION.png" alt="Misión">
+                <div class="text-content">
+                    <p>Exceder las expectativas y necesidades de cada uno de nuestros clientes, ofreciendo servicios y productos de calidad, permitiendo con ello minimizar el costo del capital, protegiendo la inversión para la toma de decisiones.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Visión -->
+        <div class="content-section">
+            <div class="section-header">
+                <h2>Nuestra Visión</h2>
+            </div>
+            <div class="info-box">
+                <img src="nosotros/VISION.png" alt="Visión">
+                <div class="text-content">
+                    <p>Mantener la preferencia, así como ser la mejor alternativa en servicios de limpieza, de tecnología, informática y seguridad, ofreciendo siempre productos de calidad y personal altamente capacitado y confiable, así como soluciones innovadoras a precios competitivos.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Valores -->
+        <div class="content-section">
+            <div class="section-header">
+                <h2>Nuestros Valores</h2>
+            </div>
+            <div class="info-box">
+                <img src="Nosotros/VALORES.png" alt="Valores">
+                <div class="text-content">
+                    <h4>Creemos en el Desarrollo Continuo</h4>
+                    <p>Ser constante en el desarrollo de cada uno de nosotros con actitud positiva para brindar la mejor calidad, sustentada en:</p>
+                    <ul>
+                        <li>Servicio</li>
+                        <li>Compromiso</li>
+                        <li>Confianza</li>
+                        <li>Responsabilidad</li>
+                        <li>Trabajo en Equipo</li>
+                        <li>Lealtad</li>
+                        <li>Honestidad</li>
+                        <li>Respeto</li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Políticas de Calidad -->
+          <div class="content-section">
+            <div class="section-header">
+                <h2>Política de Calidad</h2>
+            </div>
+            <div class="policy-box">
+                <p>TI Clean Business SA de CV, es una empresa comprometida en ser la mejor solución de limpieza especializada, desinfección y mantenimiento en general, que logre satisfacer las necesidades de nuestros clientes, en condiciones de trabajo seguras y saludables, cumpliendo con los requisitos legales, buscando la mejora continua de nuestros procesos con innovación y vanguardia.</p>
+                <p>Cómo parte de la planeación estratégica, la empresa ha implementado un sistema de gestión integrado por las normas internacionales de calidad ISO 9001:2015 y de seguridad y salud ocupacional ISO 45001:2018 que mantenemos vigente con la participación de todos nuestros colaboradores y de la que se desprenden los siguientes objetivos::</p>
+                <ul>
+
+        
+            <div class="content-section">
+                <div class="section-header">
+                    <h2>Objetivos</h2>
+                </div>
+    
+                <div class="policy-section">
+                    <div class="policy-box">
+                        <h4>Certificación ISO 45001:2018 y Mantenimiento de ISO 9001:2015</h4>
+                        <p> Obtener en 2024 la certificación de la norma ISO 45001:2018 y mantener la de la norma ISO 9001:2015.</p>
+                    </div>
+    
+                
+
+                    <div class="policy-box">
+                        <h4>Personal Capacitado y Operaciones Efectivas</h4>
+                        <p>Mantener contratado cuando menos al 90 % del personal de limpieza en cada zona para no afectar el desarrollo de las operaciones ni del programa de trabajo de 2024..</p>
+                    </div>
+    
+                    <div class="policy-box">
+                        <h4>Identificación de Peligros y Riesgos</h4>
+                        <p>Identificar los peligros y riesgos de los proyectos operativos de la compañía en 2024 para disminuir sus efectos adversos en nuestros colaboradores.</p>
+                    </div>
+    
+                    <div class="policy-box">
+                        <h4>Salud y Bienestar del Personal</h4>
+                        <p>  Determinar el estado de salud del 100 % del personal en 2024 y canalizarlo a los servicios médicos correspondientes según sea necesario.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+    
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 TI Clean & Business. Todos los derechos reservados.
+    </footer>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
